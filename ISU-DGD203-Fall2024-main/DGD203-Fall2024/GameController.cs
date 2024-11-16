@@ -97,13 +97,14 @@ public class GameController
         Console.WriteLine($"- Remaining Fuel: {raceDetails.RemainingFuelFinal}%");
         Console.WriteLine("- Status: In Race");
         Console.WriteLine("You crossed the finish line!");
-
+        Console.ReadKey();
         Console.WriteLine("\nRace Results:");
         Console.WriteLine($"- Position: {raceDetails.FinalPosition}");
         Console.WriteLine($"- Time: {raceDetails.RaceTime}");
         Console.WriteLine($"- Remaining Fuel: {raceDetails.RemainingFuelFinal}%");
         Console.WriteLine($"- Fuel Cost: ${fuelCost}");
         Console.WriteLine($"Congratulations, {_player.Name}! You are the champion of Piston Cup!");
+        Console.ReadKey();
     }
 
     private (int MaxSpeedLap1, int MaxSpeedLap2, int MaxSpeedLap3, int FinalStretchSpeed, string FinalPosition, string RaceTime, float RemainingFuelLap1, float RemainingFuelLap2, float RemainingFuelLap3, float RemainingFuelFinal) GetRaceDetails(IEngine engine)
